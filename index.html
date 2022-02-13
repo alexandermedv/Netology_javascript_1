@@ -1,0 +1,26 @@
+<script>
+    document.write('Hello, world!');
+    console.log('Hello, developers!');
+    while (true) {
+        let n = Math.floor(Math.random() * 1000);
+        console.log('n =', n);
+        let guess = prompt('Введите число от 0 до 999')
+        console.log('Введено:', guess)
+
+        if (guess === 'q') {
+            break;
+        }
+
+        if (isNaN(guess)) {
+            alert('Введено не число');
+        } else if (+guess < 0 || +guess > 999){
+            alert('Введенное число выходит за разрешенные границы');
+        } else if (+guess === n){
+            alert('Вы угадали');
+        } else if (+guess > n){
+            alert('Меньше');
+        } else if (+guess < n){
+            alert('Больше');
+        }
+    }
+  </script>
